@@ -1,0 +1,41 @@
+name: Bootstrap project source
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".bootstrap/**"
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staged repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify and materialize project source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .bootstrap/chunk-* > /tmp/task-me-source.zip
+          echo "61a8aeb678f3e5f209cdea2dae284223f092ea6f2ee66e0f93377db21d2f6d09  /tmp/task-me-source.zip" | sha256sum -c -
+
+          rm -rf /tmp/task-me-source
+          mkdir -p /tmp/task-me-source
+          unzip -q /tmp/task-me-source.zip -d /tmp/task-me-source
+
+          rm -rf .bootstrap
+          cp -a /tmp/task-me-source/. .
+          rm -f .github/workflows/bootstrap-source.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add UA graph and Task Architect Kiro project"
+          git push origin HEAD:main
