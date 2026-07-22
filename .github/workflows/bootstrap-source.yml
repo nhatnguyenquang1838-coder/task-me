@@ -1,11 +1,10 @@
 name: Bootstrap project source
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".bootstrap/**"
+  workflow_dispatch:
+  issues:
+    types:
+      - opened
 
 permissions:
   contents: write
