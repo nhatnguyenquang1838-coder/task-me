@@ -1,0 +1,96 @@
+{
+  "schema_version": "2.0",
+  "project": {
+    "name": "ua-task-architect-project-graph",
+    "repository_root": ".",
+    "default_branch": "main"
+  },
+  "knowledge": {
+    "root": ".ua",
+    "base_graph": ".ua/knowledge-graph.json",
+    "base_meta": ".ua/meta.json",
+    "extensions_root": ".ua/extensions",
+    "indexes_root": ".ua/indexes",
+    "generated_root": ".ua/generated/task-plans"
+  },
+  "sources": {
+    "requirements": [
+      "docs/requirements/**/*.md"
+    ],
+    "design": [
+      "docs/design/**/*.md",
+      "docs/adr/**/*.md"
+    ],
+    "system_graph": [
+      "docs/architecture/**/*.md"
+    ],
+    "code": [
+      "apps/work-item-service/src/**/*.js"
+    ],
+    "tests": [
+      "apps/work-item-service/test/**/*.test.js"
+    ],
+    "repository_context": [
+      "README.md",
+      "package.json",
+      "docs/knowledge/**/*.md",
+      "AGENTS.md",
+      ".kiro/steering/**/*.md"
+    ],
+    "exclude": [
+      ".git/**",
+      "**/node_modules/**",
+      "**/dist/**",
+      "vendor/**",
+      ".kiro/**",
+      ".ua/generated/**"
+    ]
+  },
+  "ua": {
+    "enabled": true,
+    "required": true,
+    "plugin_root": "vendor/understand-anything/understand-anything-plugin",
+    "refresh_mode": "incremental",
+    "preserve_extensions": true
+  },
+  "analysis": {
+    "max_file_bytes": 1000000,
+    "max_dependency_depth": 3,
+    "max_task_likely_hours": 16,
+    "minimum_evidence_confidence": 0.6,
+    "require_verified_paths": true,
+    "require_verified_symbols": true,
+    "allow_discovery_tasks": true
+  },
+  "output": {
+    "root": ".ua/generated/task-plans",
+    "language": "en",
+    "write_mode": "output_only",
+    "folder_mode": "per_task",
+    "run_folder_pattern": "{run_id}",
+    "shared_folder": "_shared",
+    "task_folder_pattern": "tasks/{task_id}-{slug}",
+    "run_files": {
+      "task_index": "task-index.yaml",
+      "task_dag": "task-dag.mmd",
+      "run_summary": "RUN-SUMMARY.md"
+    },
+    "shared_files": {
+      "source_inventory": "01-source-inventory.json",
+      "traceability": "02-traceability.json",
+      "evidence_graph": "03-evidence-graph.json",
+      "impact_analysis": "04-impact-analysis.md",
+      "validation_report": "07-validation-report.json"
+    },
+    "task_files": {
+      "canonical_task": "task.yaml",
+      "overview": "README.md",
+      "impact": "impact-analysis.md",
+      "implementation_plan": "implementation-plan.md",
+      "coding_guide": "coding-guide.md",
+      "test_plan": "test-plan.md",
+      "evidence": "evidence.json",
+      "decisions": "decisions.md"
+    }
+  }
+}

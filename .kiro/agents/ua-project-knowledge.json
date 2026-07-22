@@ -1,0 +1,26 @@
+{
+  "name": "ua-project-knowledge",
+  "description": "Build and maintain the canonical Understand Anything graph for this repository",
+  "prompt": "file://docs/agents/UA_AGENT.md",
+  "tools": [
+    "read",
+    "write",
+    "shell",
+    "grep",
+    "glob",
+    "code",
+    "subagent"
+  ],
+  "resources": [
+    "file://vendor/understand-anything/understand-anything-plugin/agents/architecture-analyzer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/article-analyzer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/assemble-reviewer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/design-analyzer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/domain-analyzer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/file-analyzer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/graph-reviewer.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/knowledge-graph-guide.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/project-scanner.md",
+    "file://vendor/understand-anything/understand-anything-plugin/agents/tour-builder.md"
+  ]
+}

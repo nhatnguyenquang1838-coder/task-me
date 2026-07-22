@@ -1,0 +1,55 @@
+{
+  "file": [
+    "file:apps/work-item-service/src/domain/workItem.js",
+    "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+    "file:apps/work-item-service/src/service/workItemService.js",
+    "file:apps/work-item-service/src/http/server.js",
+    "file:apps/work-item-service/test/workItem.test.js",
+    "file:apps/work-item-service/test/workItemService.test.js"
+  ],
+  "function": [
+    "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+    "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+    "function:apps/work-item-service/src/http/server.js:createHttpServer"
+  ],
+  "class": [
+    "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+    "class:apps/work-item-service/src/service/workItemService.js:WorkItemService"
+  ],
+  "endpoint": [
+    "endpoint:apps/work-item-service/src/http/server.js:/work-items"
+  ],
+  "ImplementationTask": [
+    "task:TASK-001",
+    "task:TASK-002",
+    "task:TASK-003"
+  ],
+  "Document": [
+    "document:docs/adr/ADR-001-in-memory-storage.md",
+    "document:docs/architecture/system-context.md",
+    "document:docs/design/DESIGN-SLA-001.md",
+    "document:docs/requirements/FEAT-SLA-001.md"
+  ],
+  "ArchitectureDecision": [
+    "architecturedecision:ADR-001"
+  ],
+  "DesignDecision": [
+    "designdecision:DD-SLA-001",
+    "designdecision:DD-SLA-002",
+    "designdecision:DD-SLA-003"
+  ],
+  "Feature": [
+    "feature:FEAT-SLA-001"
+  ],
+  "Requirement": [
+    "requirement:REQ-SLA-001",
+    "requirement:REQ-SLA-002",
+    "requirement:REQ-SLA-003"
+  ],
+  "AcceptanceCriterion": [
+    "acceptancecriterion:AC-SLA-001",
+    "acceptancecriterion:AC-SLA-002",
+    "acceptancecriterion:AC-SLA-003",
+    "acceptancecriterion:AC-SLA-004"
+  ]
+}

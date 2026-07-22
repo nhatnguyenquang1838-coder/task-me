@@ -1,0 +1,26 @@
+{
+  "name": "task-me",
+  "private": true,
+  "type": "module",
+  "version": "1.2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "bash scripts/start-dashboard.sh",
+    "dev": "bash scripts/start-dashboard.sh",
+    "dashboard:dev": "bash scripts/start-dashboard.sh",
+    "dashboard:sync": "bash scripts/sync-dashboard-data.sh",
+    "dashboard:build": "bash scripts/build-dashboard.sh",
+    "dashboard:preview": "corepack pnpm --dir vendor/understand-anything --filter @understand-anything/dashboard preview",
+    "api:start": "node apps/work-item-service/src/index.js",
+    "api:test": "node --test apps/work-item-service/test/*.test.js",
+    "test": "node --test apps/work-item-service/test/*.test.js",
+    "check": "bash scripts/validate.sh",
+    "setup:kiro": "bash scripts/install-kiro-agents.sh",
+    "setup:deps": "bash scripts/install-dependencies.sh",
+    "ua:query": "python3 tools/knowledge/query_knowledge.py",
+    "knowledge:validate": "python3 tools/knowledge/validate_knowledge_store.py",
+    "setup:ua": "bash scripts/fetch-ua.sh"
+  }
+}

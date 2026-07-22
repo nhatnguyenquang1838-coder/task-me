@@ -1,0 +1,17 @@
+node_modules/
+**/node_modules/
+**/dist/
+**/.astro/
+coverage/
+.DS_Store
+.ua/intermediate/
+.ua/tmp/
+.ua/.trash-*/
+.ua/cache/
+# Derived static dashboard data; canonical files live under root .ua/.
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/knowledge-graph.json
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/domain-graph.json
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/diff-overlay.json
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/meta.json
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/config.json
+vendor/understand-anything/understand-anything-plugin/packages/dashboard/public/staleness.json

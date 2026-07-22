@@ -1,0 +1,305 @@
+{
+  "version": "1.0.0",
+  "kind": "codebase",
+  "project": {
+    "name": "Work Item Service Starter",
+    "languages": [
+      "javascript",
+      "markdown"
+    ],
+    "frameworks": [
+      "node-http"
+    ],
+    "description": "Dependency-free sample service for UA and Task Architect",
+    "analyzedAt": "2026-07-22T06:35:06.459828+00:00",
+    "gitCommitHash": "demo-seed-refresh-with-UA"
+  },
+  "nodes": [
+    {
+      "id": "file:apps/work-item-service/src/domain/workItem.js",
+      "type": "file",
+      "name": "workItem.js",
+      "filePath": "apps/work-item-service/src/domain/workItem.js",
+      "summary": "Work item creation and transition domain rules",
+      "tags": [
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "function",
+      "name": "createWorkItem",
+      "filePath": "apps/work-item-service/src/domain/workItem.js",
+      "lineRange": [
+        8,
+        24
+      ],
+      "summary": "Validates and creates immutable work items",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "function",
+      "name": "transitionWorkItem",
+      "filePath": "apps/work-item-service/src/domain/workItem.js",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "Enforces state transitions",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "type": "file",
+      "name": "inMemoryWorkItemRepository.js",
+      "filePath": "apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "summary": "In-memory persistence adapter",
+      "tags": [
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "class",
+      "name": "InMemoryWorkItemRepository",
+      "filePath": "apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "lineRange": [
+        1,
+        18
+      ],
+      "summary": "Stores and queries work items in memory",
+      "tags": [
+        "repository"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:apps/work-item-service/src/service/workItemService.js",
+      "type": "file",
+      "name": "workItemService.js",
+      "filePath": "apps/work-item-service/src/service/workItemService.js",
+      "summary": "Application service orchestration",
+      "tags": [
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "class",
+      "name": "WorkItemService",
+      "filePath": "apps/work-item-service/src/service/workItemService.js",
+      "lineRange": [
+        4,
+        27
+      ],
+      "summary": "Coordinates domain and repository operations",
+      "tags": [
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:apps/work-item-service/src/http/server.js",
+      "type": "file",
+      "name": "server.js",
+      "filePath": "apps/work-item-service/src/http/server.js",
+      "summary": "HTTP routing adapter",
+      "tags": [
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "function",
+      "name": "createHttpServer",
+      "filePath": "apps/work-item-service/src/http/server.js",
+      "lineRange": [
+        14,
+        36
+      ],
+      "summary": "Maps HTTP routes to service operations",
+      "tags": [
+        "endpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "endpoint:apps/work-item-service/src/http/server.js:/work-items",
+      "type": "endpoint",
+      "name": "GET/POST /work-items",
+      "filePath": "apps/work-item-service/src/http/server.js",
+      "lineRange": [
+        21,
+        26
+      ],
+      "summary": "List and create work items",
+      "tags": [
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:apps/work-item-service/test/workItem.test.js",
+      "type": "file",
+      "name": "workItem.test.js",
+      "filePath": "apps/work-item-service/test/workItem.test.js",
+      "summary": "Domain tests",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:apps/work-item-service/test/workItemService.test.js",
+      "type": "file",
+      "name": "workItemService.test.js",
+      "filePath": "apps/work-item-service/test/workItemService.test.js",
+      "summary": "Service tests",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "endpoint:apps/work-item-service/src/http/server.js:/work-items",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "file:apps/work-item-service/src/domain/workItem.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "target": "file:apps/work-item-service/test/workItem.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "file:apps/work-item-service/test/workItemService.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:http",
+      "name": "HTTP",
+      "description": "Transport adapter",
+      "nodeIds": [
+        "file:apps/work-item-service/src/http/server.js",
+        "function:apps/work-item-service/src/http/server.js:createHttpServer",
+        "endpoint:apps/work-item-service/src/http/server.js:/work-items"
+      ]
+    },
+    {
+      "id": "layer:application",
+      "name": "Application",
+      "description": "Service orchestration",
+      "nodeIds": [
+        "file:apps/work-item-service/src/service/workItemService.js",
+        "class:apps/work-item-service/src/service/workItemService.js:WorkItemService"
+      ]
+    },
+    {
+      "id": "layer:domain",
+      "name": "Domain",
+      "description": "Business rules",
+      "nodeIds": [
+        "file:apps/work-item-service/src/domain/workItem.js",
+        "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+        "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem"
+      ]
+    },
+    {
+      "id": "layer:data",
+      "name": "Data",
+      "description": "Repository adapter",
+      "nodeIds": [
+        "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+        "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository"
+      ]
+    }
+  ],
+  "tour": []
+}

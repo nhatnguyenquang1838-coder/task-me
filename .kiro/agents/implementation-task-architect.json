@@ -1,0 +1,16 @@
+{
+  "name": "implementation-task-architect",
+  "description": "Generate evidence-backed implementation tasks from UA knowledge, requirements and design",
+  "prompt": "file://docs/agents/TASK_ARCHITECT_AGENT.md",
+  "tools": [
+    "read",
+    "write",
+    "shell",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "resources": [
+    "file://.kiro/skills/implementation-task-architect/SKILL.md"
+  ]
+}

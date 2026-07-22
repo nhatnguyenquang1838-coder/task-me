@@ -1,0 +1,9 @@
+# Keep UA focused on the product and engineering documents.
+vendor/**
+.kiro/**
+.ua/generated/**
+.ua/extensions/**
+.ua/indexes/**
+**/node_modules/**
+**/dist/**
+coverage/**

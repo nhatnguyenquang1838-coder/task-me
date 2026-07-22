@@ -1,0 +1,286 @@
+{
+  "function:apps/work-item-service/src/domain/workItem.js:createWorkItem": [
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "requirement:REQ-SLA-001",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.95,
+      "status": "VERIFIED"
+    }
+  ],
+  "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem": [
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository": [
+    {
+      "source": "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "class:apps/work-item-service/src/service/workItemService.js:WorkItemService": [
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "requirement:REQ-SLA-002",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.88,
+      "status": "VERIFIED"
+    }
+  ],
+  "function:apps/work-item-service/src/http/server.js:createHttpServer": [
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "requirement:REQ-SLA-003",
+      "target": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.93,
+      "status": "VERIFIED"
+    }
+  ],
+  "endpoint:apps/work-item-service/src/http/server.js:/work-items": [
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "endpoint:apps/work-item-service/src/http/server.js:/work-items",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ],
+  "file:apps/work-item-service/src/domain/workItem.js": [
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "file:apps/work-item-service/src/domain/workItem.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "file:apps/work-item-service/test/workItem.test.js": [
+    {
+      "source": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "target": "file:apps/work-item-service/test/workItem.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "file:apps/work-item-service/test/workItemService.test.js": [
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "file:apps/work-item-service/test/workItemService.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "task:TASK-002": [
+    {
+      "source": "task:TASK-001",
+      "target": "task:TASK-002",
+      "type": "BLOCKS",
+      "confidence": 1.0
+    }
+  ],
+  "task:TASK-003": [
+    {
+      "source": "task:TASK-002",
+      "target": "task:TASK-003",
+      "type": "BLOCKS",
+      "confidence": 1.0
+    }
+  ],
+  "architecturedecision:ADR-001": [
+    {
+      "source": "document:docs/adr/ADR-001-in-memory-storage.md",
+      "target": "architecturedecision:ADR-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    }
+  ],
+  "designdecision:DD-SLA-001": [
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    }
+  ],
+  "designdecision:DD-SLA-002": [
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    }
+  ],
+  "designdecision:DD-SLA-003": [
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    }
+  ],
+  "feature:FEAT-SLA-001": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "feature:FEAT-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    }
+  ],
+  "requirement:REQ-SLA-001": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-001",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "requirement:REQ-SLA-002": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-002",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "requirement:REQ-SLA-003": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-003",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "acceptancecriterion:AC-SLA-001": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-001",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "acceptancecriterion:AC-SLA-002": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-002",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "acceptancecriterion:AC-SLA-003": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-003",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ],
+  "acceptancecriterion:AC-SLA-004": [
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-004",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-004",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ]
+}

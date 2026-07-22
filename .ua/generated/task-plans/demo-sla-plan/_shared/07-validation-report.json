@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "taskCount": 3,
+  "verifiedPaths": true,
+  "dagAcyclic": true
+}

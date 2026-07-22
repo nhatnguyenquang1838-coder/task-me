@@ -1,0 +1,36 @@
+{
+  "project": "task-me",
+  "version": "1.2.0",
+  "purpose": "Render this repository knowledge graph with the UA dashboard and generate implementation plans with Task Architect.",
+  "distribution": "source-only-slim",
+  "ua": {
+    "repository": "Egonex-AI/Understand-Anything",
+    "commit": "6ae71878beb50226a1e4b7e2f52ac6468c86f74b",
+    "runtimePath": "vendor/understand-anything",
+    "committed": false,
+    "bootstrap": "scripts/fetch-ua.sh"
+  },
+  "graphSource": ".ua/knowledge-graph.json",
+  "removedResources": [
+    "committed UA vendor mirror",
+    "UA marketing homepage",
+    "homepage GIF/PNG/JPG assets",
+    "dashboard demo graph",
+    "remote font requests"
+  ],
+  "entrypoints": {
+    "dashboard": "npm start",
+    "api": "npm run api:start",
+    "bootstrap": "./scripts/bootstrap.sh --install-deps",
+    "validation": "npm run check"
+  },
+  "validation": {
+    "sampleTests": "PASS",
+    "knowledgeStore": "PASS",
+    "taskFolderLayout": "PASS",
+    "shellSyntax": "PASS",
+    "javascriptSyntax": "PASS",
+    "pythonSyntax": "PASS",
+    "uaNetworkBootstrap": "NOT_RUN_IN_BUILD_ENVIRONMENT"
+  }
+}

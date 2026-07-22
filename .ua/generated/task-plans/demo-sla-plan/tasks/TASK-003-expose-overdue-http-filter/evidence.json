@@ -1,0 +1,10 @@
+{
+  "requirements": [
+    "REQ-SLA-002",
+    "REQ-SLA-003"
+  ],
+  "verifiedFiles": [
+    "apps/work-item-service/src/http/server.js"
+  ],
+  "baseGraphCommit": "demo-seed-refresh-with-UA"
+}

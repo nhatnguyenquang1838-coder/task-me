@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "kind": "traceability-extension",
+  "nodes": [],
+  "edges": [
+    {
+      "source": "requirement:REQ-SLA-001",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.95,
+      "status": "VERIFIED"
+    },
+    {
+      "source": "requirement:REQ-SLA-002",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.88,
+      "status": "VERIFIED"
+    },
+    {
+      "source": "requirement:REQ-SLA-003",
+      "target": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "REQUIRES_CHANGE",
+      "confidence": 0.93,
+      "status": "VERIFIED"
+    }
+  ]
+}

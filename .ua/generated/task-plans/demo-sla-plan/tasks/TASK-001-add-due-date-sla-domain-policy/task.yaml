@@ -1,0 +1,9 @@
+task_id: TASK-001
+title: Add due date and SLA domain policy
+objective: Add optional dueAt validation and pure SLA status derivation in the domain layer.
+requirements: [REQ-SLA-001, REQ-SLA-002]
+blocked_by: []
+blocks: [TASK-002]
+effort_likely: 5-8h
+risk: R1
+status: READY

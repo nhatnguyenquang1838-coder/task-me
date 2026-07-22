@@ -1,0 +1,17 @@
+{
+  "requirements": [
+    "docs/requirements/FEAT-SLA-001.md"
+  ],
+  "design": [
+    "docs/design/DESIGN-SLA-001.md",
+    "docs/adr/ADR-001-in-memory-storage.md"
+  ],
+  "code": [
+    "apps/work-item-service/src/domain/workItem.js",
+    "apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+    "apps/work-item-service/src/service/workItemService.js",
+    "apps/work-item-service/src/http/server.js",
+    "apps/work-item-service/test/workItem.test.js",
+    "apps/work-item-service/test/workItemService.test.js"
+  ]
+}

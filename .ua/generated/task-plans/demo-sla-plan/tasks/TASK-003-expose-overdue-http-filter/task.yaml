@@ -1,0 +1,9 @@
+task_id: TASK-003
+title: Expose overdue HTTP filter and SLA response state
+objective: Extend GET /work-items with filter=overdue and include derived slaStatus in API responses.
+requirements: [REQ-SLA-002, REQ-SLA-003]
+blocked_by: [TASK-002]
+blocks: []
+effort_likely: 4-6h
+risk: R1
+status: READY

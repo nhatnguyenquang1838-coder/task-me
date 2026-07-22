@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "kind": "spec-extension",
+  "nodes": [
+    {
+      "id": "document:docs/adr/ADR-001-in-memory-storage.md",
+      "type": "Document",
+      "title": "ADR-001-in-memory-storage.md",
+      "path": "docs/adr/ADR-001-in-memory-storage.md",
+      "contentHash": "399febeab6e448997cde704f8b358c833f8beaeb084f5ed3216d1c56e3efecdd"
+    },
+    {
+      "id": "architecturedecision:ADR-001",
+      "type": "ArchitectureDecision",
+      "title": "ADR-001 — In-memory repository for the starter",
+      "path": "docs/adr/ADR-001-in-memory-storage.md",
+      "line": 1
+    },
+    {
+      "id": "document:docs/architecture/system-context.md",
+      "type": "Document",
+      "title": "system-context.md",
+      "path": "docs/architecture/system-context.md",
+      "contentHash": "b0072abfe0b3e2e39bdbf26e1e76a2d1369baff3f8c9e8c432c5e7022781ba5b"
+    },
+    {
+      "id": "document:docs/design/DESIGN-SLA-001.md",
+      "type": "Document",
+      "title": "DESIGN-SLA-001.md",
+      "path": "docs/design/DESIGN-SLA-001.md",
+      "contentHash": "abfe0836bb84e7fbbac4005568104054265b4ba88cf14bebf6da3a14e06bf1f5"
+    },
+    {
+      "id": "designdecision:DD-SLA-001",
+      "type": "DesignDecision",
+      "title": "DD-SLA-001 — Keep SLA calculation in the domain",
+      "path": "docs/design/DESIGN-SLA-001.md",
+      "line": 5
+    },
+    {
+      "id": "designdecision:DD-SLA-002",
+      "type": "DesignDecision",
+      "title": "DD-SLA-002 — Repository query remains capability-based",
+      "path": "docs/design/DESIGN-SLA-001.md",
+      "line": 14
+    },
+    {
+      "id": "designdecision:DD-SLA-003",
+      "type": "DesignDecision",
+      "title": "DD-SLA-003 — HTTP compatibility",
+      "path": "docs/design/DESIGN-SLA-001.md",
+      "line": 22
+    },
+    {
+      "id": "document:docs/requirements/FEAT-SLA-001.md",
+      "type": "Document",
+      "title": "FEAT-SLA-001.md",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "contentHash": "5023b8cb1d837bac04a5434f8dc20518272169253fd45c1870c2dd3c760a7014"
+    },
+    {
+      "id": "feature:FEAT-SLA-001",
+      "type": "Feature",
+      "title": "FEAT-SLA-001 — Due dates and SLA visibility",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 1
+    },
+    {
+      "id": "requirement:REQ-SLA-001",
+      "type": "Requirement",
+      "title": "REQ-SLA-001 — Optional due date",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 5
+    },
+    {
+      "id": "requirement:REQ-SLA-002",
+      "type": "Requirement",
+      "title": "REQ-SLA-002 — Derived SLA state",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 11
+    },
+    {
+      "id": "requirement:REQ-SLA-003",
+      "type": "Requirement",
+      "title": "REQ-SLA-003 — Overdue query",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 21
+    },
+    {
+      "id": "acceptancecriterion:AC-SLA-001",
+      "type": "AcceptanceCriterion",
+      "title": "AC-SLA-001",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 28
+    },
+    {
+      "id": "acceptancecriterion:AC-SLA-002",
+      "type": "AcceptanceCriterion",
+      "title": "AC-SLA-002",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 31
+    },
+    {
+      "id": "acceptancecriterion:AC-SLA-003",
+      "type": "AcceptanceCriterion",
+      "title": "AC-SLA-003",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 34
+    },
+    {
+      "id": "acceptancecriterion:AC-SLA-004",
+      "type": "AcceptanceCriterion",
+      "title": "AC-SLA-004",
+      "path": "docs/requirements/FEAT-SLA-001.md",
+      "line": 37
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/adr/ADR-001-in-memory-storage.md",
+      "target": "architecturedecision:ADR-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/design/DESIGN-SLA-001.md",
+      "target": "designdecision:DD-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "feature:FEAT-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-001",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-002",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "requirement:REQ-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "requirement:REQ-SLA-003",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-001",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-001",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-002",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-002",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-003",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-003",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    },
+    {
+      "source": "document:docs/requirements/FEAT-SLA-001.md",
+      "target": "acceptancecriterion:AC-SLA-004",
+      "type": "CONTAINS",
+      "confidence": 1.0
+    },
+    {
+      "source": "feature:FEAT-SLA-001",
+      "target": "acceptancecriterion:AC-SLA-004",
+      "type": "DECOMPOSES_TO",
+      "confidence": 1.0
+    }
+  ]
+}

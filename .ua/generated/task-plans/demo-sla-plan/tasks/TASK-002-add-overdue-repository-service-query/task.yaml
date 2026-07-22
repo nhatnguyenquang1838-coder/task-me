@@ -1,0 +1,9 @@
+task_id: TASK-002
+title: Add overdue repository and service query
+objective: Add repository/service support for filtering overdue work items with an injected clock.
+requirements: [REQ-SLA-002, REQ-SLA-003]
+blocked_by: [TASK-001]
+blocks: [TASK-003]
+effort_likely: 4-7h
+risk: R1
+status: READY

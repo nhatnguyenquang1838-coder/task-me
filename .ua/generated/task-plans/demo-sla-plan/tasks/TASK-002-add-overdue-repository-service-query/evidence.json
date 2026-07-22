@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    "REQ-SLA-002",
+    "REQ-SLA-003"
+  ],
+  "verifiedFiles": [
+    "apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+    "apps/work-item-service/src/service/workItemService.js",
+    "apps/work-item-service/test/workItemService.test.js"
+  ],
+  "baseGraphCommit": "demo-seed-refresh-with-UA"
+}

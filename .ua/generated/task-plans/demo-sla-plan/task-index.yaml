@@ -1,0 +1,8 @@
+run_id: demo-sla-plan
+tasks:
+  - task_id: TASK-001
+    folder: tasks/TASK-001-add-due-date-sla-domain-policy
+  - task_id: TASK-002
+    folder: tasks/TASK-002-add-overdue-repository-service-query
+  - task_id: TASK-003
+    folder: tasks/TASK-003-expose-overdue-http-filter

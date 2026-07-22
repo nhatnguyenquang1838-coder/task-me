@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "kind": "planning-extension",
+  "nodes": [
+    {
+      "id": "task:TASK-001",
+      "type": "ImplementationTask",
+      "taskId": "TASK-001",
+      "title": "Add due date and SLA domain policy",
+      "status": "READY",
+      "runId": "demo-sla-plan"
+    },
+    {
+      "id": "task:TASK-002",
+      "type": "ImplementationTask",
+      "taskId": "TASK-002",
+      "title": "Add overdue repository and service query",
+      "status": "READY",
+      "runId": "demo-sla-plan"
+    },
+    {
+      "id": "task:TASK-003",
+      "type": "ImplementationTask",
+      "taskId": "TASK-003",
+      "title": "Expose overdue HTTP filter and response SLA state",
+      "status": "READY",
+      "runId": "demo-sla-plan"
+    }
+  ],
+  "edges": [
+    {
+      "source": "task:TASK-001",
+      "target": "task:TASK-002",
+      "type": "BLOCKS",
+      "confidence": 1.0
+    },
+    {
+      "source": "task:TASK-002",
+      "target": "task:TASK-003",
+      "type": "BLOCKS",
+      "confidence": 1.0
+    }
+  ]
+}

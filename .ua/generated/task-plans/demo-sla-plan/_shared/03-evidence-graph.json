@@ -1,0 +1,109 @@
+{
+  "selectedNodeIds": [
+    "file:apps/work-item-service/src/domain/workItem.js",
+    "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+    "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+    "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+    "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+    "file:apps/work-item-service/src/service/workItemService.js",
+    "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+    "file:apps/work-item-service/src/http/server.js",
+    "function:apps/work-item-service/src/http/server.js:createHttpServer",
+    "endpoint:apps/work-item-service/src/http/server.js:/work-items",
+    "file:apps/work-item-service/test/workItem.test.js",
+    "file:apps/work-item-service/test/workItemService.test.js"
+  ],
+  "selectedEdges": [
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/domain/workItem.js",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/http/server.js",
+      "target": "endpoint:apps/work-item-service/src/http/server.js:/work-items",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:apps/work-item-service/src/service/workItemService.js",
+      "target": "file:apps/work-item-service/src/domain/workItem.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "function:apps/work-item-service/src/domain/workItem.js:transitionWorkItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "class:apps/work-item-service/src/repository/inMemoryWorkItemRepository.js:InMemoryWorkItemRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:apps/work-item-service/src/http/server.js:createHttpServer",
+      "target": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:apps/work-item-service/src/domain/workItem.js:createWorkItem",
+      "target": "file:apps/work-item-service/test/workItem.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:apps/work-item-service/src/service/workItemService.js:WorkItemService",
+      "target": "file:apps/work-item-service/test/workItemService.test.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

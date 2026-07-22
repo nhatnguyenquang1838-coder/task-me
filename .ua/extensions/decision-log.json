@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "id": "decision:demo:001",
+      "question": "How should FEAT-SLA-001 be decomposed?",
+      "rule": "Split by independently testable domain, repository/service, and HTTP boundaries.",
+      "result": [
+        "TASK-001",
+        "TASK-002",
+        "TASK-003"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}
