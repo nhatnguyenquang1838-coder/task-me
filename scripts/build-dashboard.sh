@@ -2,14 +2,15 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 UA_ROOT="$ROOT/vendor/understand-anything"
-[ -d "$UA_ROOT/.git" ] || "$ROOT/scripts/fetch-ua.sh"
 DASHBOARD="$UA_ROOT/understand-anything-plugin/packages/dashboard"
 
+"$ROOT/scripts/fetch-ua.sh"
 [ -d "$UA_ROOT/node_modules" ] || {
   echo 'ERROR: UA dependencies are not installed.'
   echo 'Run: npm run setup:deps'
   exit 2
 }
+
 cleanup() { "$ROOT/scripts/clean-dashboard-data.sh" >/dev/null; }
 trap cleanup EXIT
 
