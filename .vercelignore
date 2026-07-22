@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+vendor/understand-anything
+apps/work-item-service/test
+.ua/generated
+.ua/indexes
+.kiro
+.task-architect
+coverage
+docs
