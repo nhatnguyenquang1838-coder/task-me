@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "bash scripts/vercel-install.sh",
+  "buildCommand": "bash scripts/vercel-build.sh",
+  "outputDirectory": "vendor/understand-anything/understand-anything-plugin/packages/dashboard/dist",
+  "ignoreCommand": "bash scripts/vercel-ignore-build.sh",
+  "cleanUrls": true
+}
